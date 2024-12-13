@@ -1,15 +1,14 @@
 {
-  "name": "jsonresume-theme-americano",
+  "name": "jsonresume-theme-kittyfarren",
   "version": "1.0.8",
-  "description": "Simple theme for JSON Resume based on the macchiato theme.",
-  "author": "NuclearRedeye",
-  "license": "MIT",
+  "description": "Simple purple theme for JSON Resume based on the macchiato theme.",
+  "author": "KittyFarren",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NuclearRedeye/jsonresume-theme-americano"
+    "url": "https://github.com/kitblafar/jsonresume-theme-kittyfarren"
   },
   "scripts": {
     "postversion": "git push origin master && git push origin --tags"
