@@ -1,4 +1,4 @@
-# jsonresume-theme-kittyfarren ![npm version](https://www.npmjs.com/package/jsonresume-theme-kittyfarren)
+# jsonresume-theme-kittyfarren [npm version](https://www.npmjs.com/package/jsonresume-theme-kittyfarren)
 
 
 A purple theme for [JsonResume](https://jsonresume.org/) based on americano theme. The following previews show the elements
