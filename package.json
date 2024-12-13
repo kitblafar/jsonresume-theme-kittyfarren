@@ -1,8 +1,9 @@
 {
   "name": "jsonresume-theme-kittyfarren",
-  "version": "1.0.8",
-  "description": "Simple purple theme for JSON Resume based on the macchiato theme.",
+  "version": "1.0.14",
+  "description": "Simple purple theme for JSON Resume based on the americano theme.",
   "author": "KittyFarren",
+  "keywords": ["jsonresume", "jsonresume-theme", "json-resume"],
   "publishConfig": {
     "access": "public"
   },
