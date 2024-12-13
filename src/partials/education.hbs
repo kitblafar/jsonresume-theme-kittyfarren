@@ -1,0 +1,117 @@
+{{#if resume.education.length}}
+<section class="education">
+    {{> section-heading icon="graduation-cap" value="Education"}}
+
+    {{#each resume.education}}
+    <section class="institution">
+        <div class="column">
+            <div class="row stretch">
+                <div class="column fill">
+                    <h4>
+                        {{#if studyType}}
+                        {{studyType}}
+                        {{/if}}
+                        {{#if area}}
+                        {{area}}
+                        {{/if}}
+                    </h4>
+                    <h4>
+                        {{#if institution}}
+                        {{institution}}
+                        {{/if}}</h4>
+
+                    {{#if score}}
+                    <h4>
+                        {{score}}
+                    </h4>
+                    {{/if}}
+                </div>
+
+                <div class="column end">
+                    {{#if startDate}}
+                    <h6>
+                        <i class="fa fa-calendar"></i>
+                        <span class="startDate">{{formatDate startDate}}</span>
+                        {{#if endDate}}
+                        <span class="endDate"> - {{formatDate endDate}}</span>
+                        {{else}}
+                        <span class="endDate"> - Present</span>
+                        {{/if}}
+                    </h6>
+                    {{/if}}
+
+                    {{#if duration}}
+                    <h6>
+                        <i class="fa fa-clock-o"></i>
+                        <span>{{duration}}</span>
+                    </h6>
+                    {{/if}}
+
+                    {{#if location}}
+                    <h6>
+                        <i class="fa fa-map-marker"></i>
+                        <span>{{location}}</span>
+                    </h6>
+                    {{/if}}
+                </div>
+            </div>
+
+            {{#if individualProject}}
+            <div >
+                <h5>Individual Project:</h5>
+                <p class="no-top-margin">
+                    {{individualProject}}
+                </p>
+            </div>
+            {{/if}}
+
+            {{#if courses.length}}
+            <div>
+                <h5>Modules:</h5>
+                <p class="no-top-margin">
+                    {{#each courses}}
+                    {{#if @last}}
+                    and {{.}}.
+                    {{else}}
+                    {{.}};
+                    {{/if}}
+                    {{/each}}
+                </p>
+            </div>
+            {{/if}}
+
+            {{#if groupProjects}}
+            <div>
+                <h5 >Group Projects:</h5>
+                <p class="no-top-margin">
+                    {{#each groupProjects}}
+                    {{#if @last}}
+                    and {{.}}.
+                    {{else}}
+                    {{.}};
+                    {{/if}}
+                    {{/each}}
+                </p>
+            </div>
+            {{/if}}
+
+            {{#if awards}}
+            <div>
+                <h5 >Awards:</h5>
+                <p class="no-top-margin">
+                    {{#each awards}}
+                    {{#if @last}}
+                    and {{.}}.
+                    {{else}}
+                    {{.}}
+                    {{/if}}
+                    {{/each}}
+                </p>
+            </div>
+            {{/if}}
+
+        </div>
+    </section>
+    {{/each}}
+</section>
+{{/if}}

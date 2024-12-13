@@ -1,0 +1,15 @@
+<div class="row align-center">
+    <h6 class="large">
+        {{#if icon}}
+        <i class="fa {{icon}}"></i>
+        {{/if}}
+
+        {{#if href}}
+            <a href="{{#if isEmail}}mailto:{{/if}}{{href}}" target="_blank">
+                {{removeProtocol text}}
+            </a>
+        {{else}}
+            {{{text}}}
+        {{/if}}
+    </h6>
+</div>

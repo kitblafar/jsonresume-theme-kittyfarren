@@ -1,0 +1,47 @@
+
+{{#if position}}
+<section class="position">
+  <div class="grid">
+    <div class="bullet"></div>
+    <h4 class="bold">{{position}}</h4>
+
+    <div class="line"></div>
+    <div class="column">
+      <div class="row end">
+        {{#if startDate}}
+          <h6 class="space">
+            <i class="fa fa-calendar"></i>
+            <span>{{formatDate startDate}}</span>
+            {{#if endDate}}
+              <span> - {{formatDate endDate}}</span>
+            {{else}}
+              <span> - Present</span>
+            {{/if}}
+          </h6>
+        {{/if}}
+
+        {{#if duration}}
+          <h6>
+            <i class="fa fa-clock-o"></i>
+            <span>{{duration}}</span>
+          </h6>
+        {{/if}}
+      </div>
+
+      {{#if summary}}
+        {{#each (split summary) }}
+          <p>{{.}}</p>
+        {{/each}}
+      {{/if}}
+
+      {{#if highlights.length}}
+      <ul>
+          {{#each highlights}}
+          <li>{{.}}</li>
+          {{/each}}
+      </ul>
+      {{/if}}
+    </div>
+  </div>
+</section>
+{{/if}}

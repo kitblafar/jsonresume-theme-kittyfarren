@@ -1,0 +1,26 @@
+{{#if resume.skills.length}}
+    <section class="skills">
+        {{> section-heading icon="wrench" value="Skills"}}
+        <div class="grid">
+            {{#each resume.skills}}
+                <div class="column fit">
+                    {{#if name}}
+                        <h4 class="bold capitalize">{{name}}</h4>
+                    {{/if}}
+                    {{#if level}}
+                        <h4 class="capitalize">{{level}}</h4>
+                    {{/if}}
+                </div>
+                {{#if keywords.length}}
+                    <div class="column">
+                        <div class="row wrap">
+                        {{#each keywords}}
+                            <h6 class="chip">{{.}}</h6>
+                        {{/each}}
+                        </div>  
+                    </div>
+                {{/if}}
+            {{/each}}
+        </div>
+    </section>
+{{/if}}

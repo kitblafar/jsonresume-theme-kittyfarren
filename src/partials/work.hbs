@@ -1,0 +1,11 @@
+{{#if resume.work.length}}
+<section class="work">
+    {{> section-heading icon="building" value="Work"}}
+    {{#each resume.work}}
+        {{> company}}
+        {{#each this.positions}}
+            {{> position}}
+        {{/each}}
+    {{/each}}
+</section>
+{{/if}}

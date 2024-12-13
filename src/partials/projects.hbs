@@ -1,0 +1,75 @@
+{{#if resume.projects.length}}
+<section class="projects">
+    {{> section-heading icon="code" value="Projects"}}
+
+    <div class="grid threecolumns">
+        {{#each resume.projects}}
+
+            <div class="column fit start">
+            <div class="line"></div>
+            </div>
+
+            <div class="column">
+
+                {{#if image}}
+                <img class="logo" src={{image}} />
+                {{/if}}
+
+                <div class="column inherit-height">
+                    {{#if name}}
+                    <h4 class="bold">
+                        {{#if url}}
+                        <a href="{{url}}" target="_blank">{{name}}</a>
+                        {{else}}
+                        {{name}}
+                        {{/if}}
+                    </h4>
+                    {{/if}}
+
+                    {{#if this.keywords.length}}
+                    <div class="row wrap">
+                        {{#each this.keywords}}
+                        <h6 class="chip">{{.}}</h6>
+                        {{/each}}
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="column end">
+                {{#if startDate}}
+                <h6>
+                    <i class="fa fa-calendar"></i>
+                    <span>{{formatDate startDate}}</span>
+                    {{#if endDate}}
+                    <span> - {{formatDate endDate}}</span>
+                    {{else}}
+                    <span> - Present</span>
+                    {{/if}}
+                </h6>
+                {{/if}}
+
+                {{#if duration}}
+                <h6>
+                    <i class="fa fa-clock-o"></i>
+                    <span>{{duration}}</span>
+                </h6>
+                {{/if}}
+
+                {{#if description}}
+                {{#each (split description) }}
+                <p>{{this}}</p>
+                {{/each}}
+                {{/if}}
+
+                {{#if highlights.length}}
+                <ul>
+                    {{#each highlights}}
+                    <li>{{.}}</li>
+                    {{/each}}
+                </ul>
+                {{/if}}
+            </div>
+        {{/each}}
+    </div>
+</section>
+{{/if}}

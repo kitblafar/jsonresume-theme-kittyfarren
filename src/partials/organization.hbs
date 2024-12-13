@@ -1,0 +1,53 @@
+<section class="organization">
+    <div class="row wide">
+        {{#if image}}
+            <img class="logo" src={{image}} />
+        {{/if}}
+        <div class="column fill between">
+            {{#if organization}}
+                <h3 class="bold">
+                    {{organization}}
+                </h3>
+            {{/if}}
+
+            {{#if url}}
+                <h6><a href={{url}} target="_blank">{{url}}</a></h6>
+            {{/if}}
+            
+            {{#if this.keywords.length}}
+            <div class="row wrap">
+                {{#each this.keywords}}
+                    <h6 class="chip">{{.}}</h6>
+                {{/each}}
+            </div>
+            {{/if}}
+        </div>
+        <div class="column end fit">
+            {{#if startDate}}
+                <h6>
+                    <i class="fa fa-calendar"></i>
+                    <span>{{formatDate startDate}}</span>
+                    {{#if endDate}}
+                    <span> - {{formatDate endDate}}</span>
+                    {{else}}
+                    <span> - Present</span>
+                    {{/if}}
+                </h6>
+            {{/if}}
+
+            {{#if duration}}
+                <h6>
+                    <i class="fa fa-clock-o"></i>
+                    <span>{{duration}}</span>
+                </h6>
+            {{/if}}
+
+            {{#if location}}
+                <h6>
+                    <i class="fa fa-map-marker"></i>
+                    <span>{{location}}</span>
+                </h6>
+            {{/if}}
+        </div>
+    </div>
+</section>

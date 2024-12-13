@@ -1,0 +1,52 @@
+{{#if resume.publications.length}}
+<section class="publications">
+    {{> section-heading icon="book" value="Publications"}}
+
+    {{#each resume.publications}}
+        <section class="publication">
+            <div class="column">
+                <div class="row wide inherit-height">
+                    <div class="column fill between inherit-height">
+                        {{#if name}}
+                            <h3 class="bold">
+                                {{#if url}}
+                                    <a href="{{url}}" target="_blank">{{name}}</a>
+                                {{else}}
+                                    {{name}}
+                                {{/if}}
+                            </h3>
+                        {{/if}}
+
+                        {{#if publisher}}
+                            <h5>{{publisher}}</h5>
+                        {{/if}}
+
+                        {{#if this.keywords.length}}
+                            <div class="row wrap">
+                                {{#each this.keywords}}
+                                    <h6 class="chip">{{.}}</h6>
+                                {{/each}}
+                            </div>
+                        {{/if}}
+                    </div>
+
+                    <div class="column end fit">
+                        {{#if releaseDate}}
+                            <h6>
+                                <i class="fa fa-calendar"></i>
+                                <span>{{formatDate releaseDate}}</span>
+                            </h6>
+                        {{/if}}
+                    </div>
+                </div>
+
+                {{#if summary}}
+                    {{#each (split summary) }}
+                    <p>{{this}}</p>
+                    {{/each}}
+                {{/if}}
+            </div>
+        </section>
+    {{/each}}
+</section>
+{{/if}}

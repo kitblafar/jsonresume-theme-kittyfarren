@@ -1,0 +1,14 @@
+{{#resume.basics}}
+{{#if summary}}
+    <section class="about">
+        {{> section-heading icon="user" value="About"}}
+        {{#if summary}}
+            <div class="column">
+            {{#each (split summary) }}
+                <p class="summary">{{this}}</p>
+            {{/each}}
+            </div>
+        {{/if}}
+    </section>
+{{/if}}
+{{/resume.basics}}

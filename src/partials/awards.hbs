@@ -1,0 +1,53 @@
+{{#if resume.awards.length}}
+<section class="awards">
+    {{> section-heading icon="trophy" value="Awards"}}
+
+    {{#each resume.awards}}
+        <section class="award">
+            <div class="column">
+                <div class="line"></div>
+                <div class="row wide inherit-height">
+                    <div class="column fill between inherit-height">
+                        {{#if title}}
+                            <h4 class="bold">
+                                {{#if url}}
+                                    <a href="{{url}}" target="_blank">{{title}}</a>
+                                {{else}}
+                                    {{title}}
+                                {{/if}}
+                            </h4>
+                        {{/if}}
+
+                        {{#if awarder}}
+                            <h5>{{awarder}}</h5>
+                        {{/if}}
+
+                        {{#if this.keywords.length}}
+                            <div class="row wrap">
+                                {{#each this.keywords}}
+                                    <h6 class="chip">{{.}}</h6>
+                                {{/each}}
+                            </div>
+                        {{/if}}
+                    </div>
+
+                    <div class="column end fit">
+                        {{#if date}}
+                            <h6>
+                                <i class="fa fa-calendar"></i>
+                                <span>{{formatDate date}}</span>
+                            </h6>
+                        {{/if}}
+                    </div>
+                </div>
+
+                {{#if summary}}
+                    {{#each (split summary) }}
+                    <p>{{this}}</p>
+                    {{/each}}
+                {{/if}}
+            </div>
+        </section>
+    {{/each}}
+</section>
+{{/if}}

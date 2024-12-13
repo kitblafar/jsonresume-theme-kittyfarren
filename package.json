@@ -1,0 +1,26 @@
+{
+  "name": "jsonresume-theme-americano",
+  "version": "1.0.8",
+  "description": "Simple theme for JSON Resume based on the macchiato theme.",
+  "author": "NuclearRedeye",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NuclearRedeye/jsonresume-theme-americano"
+  },
+  "scripts": {
+    "postversion": "git push origin master && git push origin --tags"
+  },
+  "dependencies": {
+    "address-format": "^0.0.3",
+    "handlebars": "^4.7.6",
+    "handlebars-wax": "^6.1.0",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "resume-cli": "^3.1.2"
+  }
+}

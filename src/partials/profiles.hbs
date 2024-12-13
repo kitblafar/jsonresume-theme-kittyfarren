@@ -1,0 +1,35 @@
+{{#resume.basics}}
+{{#if profiles}}
+<section class="profiles">
+    <div class="row centre wide">
+        {{#each profiles}}
+        {{#if network}}
+        {{#if username}}
+        <div class="url no-print">
+            <a href={{url}}>
+                {{> info-tag text=this.username href=this.url icon=(concat "fa-"
+                (lowercase network)) }}
+            </a>
+        </div>
+
+        <div class="url no-show">
+            <a href={{url}}>
+                {{> info-tag text=this.url href=this.url icon=(concat "fa-"
+                (lowercase network)) }}
+            </a>
+        </div>
+
+        {{/if}}
+        {{/if}}
+        {{/each}}
+        <div class="url">
+            <a href={{website}}>
+                {{#if website}}
+                {{> info-tag text=website icon="fa-globe" href=website}}
+                {{/if}}
+            </a>
+        </div>
+    </div>
+</section>
+{{/if}}
+{{/resume.basics}}
